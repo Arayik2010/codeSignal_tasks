@@ -18,13 +18,29 @@
 //For year = 1905, the output should besolution(year) = 20
 //For year = 1700, the output should besolution(year) = 17.
 
-function solution(year) {
-  let century;
-  if (year % 100 == 0) {
-    century = year / 100;
-  } else if (year % 100 !== 0) {
-    century = Math.ceil(year / 100);
+// function solution(year) {
+//   let century;
+//   if (year % 100 == 0) {
+//     century = year / 100;
+//   } else if (year % 100 !== 0) {
+//     century = Math.ceil(year / 100);
+//   }
+//   return century;
+// }
+// console.log(solution(2022));
+
+///////////////////////////////////////////////////////////
+
+//3.Given the string, check if it is a palindrome.
+//Example
+//For inputString = "aabaa", the output should be solution(inputString) = true;
+//For inputString = "abac", the output should be solution(inputString) = false
+
+function solution(inputString) {
+  let str = inputString.split("").reverse().join("");
+  if (str === inputString) {
+    return true;
   }
-  return century;
+  return false;
 }
-console.log(solution(2022));
+console.log(solution('aabaa'));
