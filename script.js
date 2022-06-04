@@ -36,11 +36,28 @@
 //For inputString = "aabaa", the output should be solution(inputString) = true;
 //For inputString = "abac", the output should be solution(inputString) = false
 
-function solution(inputString) {
-  let str = inputString.split("").reverse().join("");
-  if (str === inputString) {
-    return true;
+// function solution(inputString) {
+//   let str = inputString.split("").reverse().join("");
+//   if (str === inputString) {
+//     return true;
+//   }
+//   return false;
+// }
+// console.log(solution('aba'));
+
+//////////////////////////////////////////////////////////
+
+//4.Given an array of integers, find the pair of adjacent elements that has the largest product and return that product.
+//Example
+//For inputArray = [3, 6, -2, -5, 7, 3], the output should be solution(inputArray) = 21.
+//7 and 3 produce the largest product
+
+function solution(inputArray) {
+  let max = -Infinity;
+
+  for (let i = 0; i < inputArray.length - 1; i++) {
+    max = max > inputArray[i] * inputArray[i + 1] ? max : inputArray[i] * inputArray[i + 1];
   }
-  return false;
+  return max;
 }
-console.log(solution('aabaa'));
+console.log(solution([3, 6, -2, -5, 7, 3]));
