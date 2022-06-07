@@ -70,11 +70,29 @@
 //For n = 2, the output should be solution(n) = 5;
 //For n = 3, the output should be solution(n) = 13.
 
-function solution(n) {
-  if (n === 1) {
-    return 1;
-  } else {
-    return n * n + (n - 1) * (n - 1);
+// function solution(n) {
+//   if (n === 1) {
+//     return 1;
+//   } else {
+//     return n * n + (n - 1) * (n - 1);
+//   }
+// }
+// console.log(solution(3));
+
+//6.Ratiorg got statues of different sizes as a present from CodeMaster for his birthday, each statue having an non-negative integer size. Since he likes to make things perfect, he wants to arrange them from smallest to largest so that each statue will be bigger than the previous one exactly by 1. He may need some additional statues to be able to accomplish that. Help him figure out the minimum number of additional statues needed.
+//Example
+//For statues = [6, 2, 3, 8], the output should be solution(statues) = 3.
+//Ratiorg needs statues of sizes 4, 5 and 7.
+
+function solution(statues) {
+  let arr = statues.sort((a, b) => a - b);
+  let num = arr[0];
+  let num2 = arr[arr.length - 1];
+  let arr2 = [];
+  for (let i = num; i <= num2; i++) {
+    arr2.push(i);
   }
+  return arr2.length - arr.length
 }
-console.log(solution(3));
+
+console.log(solution([6, 2, 3, 8]));
