@@ -84,15 +84,32 @@
 //For statues = [6, 2, 3, 8], the output should be solution(statues) = 3.
 //Ratiorg needs statues of sizes 4, 5 and 7.
 
-function solution(statues) {
-  let arr = statues.sort((a, b) => a - b);
-  let num = arr[0];
-  let num2 = arr[arr.length - 1];
-  let arr2 = [];
-  for (let i = num; i <= num2; i++) {
-    arr2.push(i);
-  }
-  return arr2.length - arr.length
-}
+// function solution(statues) {
+//   let arr = statues.sort((a, b) => a - b);
+//   let num = arr[0];
+//   let num2 = arr[arr.length - 1];
+//   let arr2 = [];
+//   for (let i = num; i <= num2; i++) {
+//     arr2.push(i);
+//   }
+//   return arr2.length - arr.length
+// }
 
-console.log(solution([6, 2, 3, 8]));
+// console.log(solution([6, 2, 3, 8]));
+
+//7.Given a sequence of integers as an array, determine whether it is possible to obtain a strictly increasing sequence by removing no more than one element from the array.
+
+// function solution(sequence) {
+//   let count = 0;
+//   for (let i = 1; i < sequence.length; i++) {
+//     if (sequence[i] <= sequence[i - 1]) {
+//       count++;
+//       const x = sequence[i] <= sequence[i - 2] ? i : i - 1;
+//       sequence.splice(x, 1);
+//       i -= 2;
+//     }
+//   }
+
+//   return count < 2;
+// }
+// console.log(solution([1, 3, 2, 1]));
