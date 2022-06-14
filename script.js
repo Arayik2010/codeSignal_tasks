@@ -113,3 +113,32 @@
 //   return count < 2;
 // }
 // console.log(solution([1, 3, 2, 1]));
+
+
+//8.Given matrix, a rectangular matrix of integers, where each value represents the cost of the room, your task is to return the total sum of all rooms that are suitable for the CodeBots (ie: add up all the values that don't appear below a 0).
+//Example
+//matrix = [[0, 1, 1, 2], 
+        //   [0, 5, 0, 0], 
+        //   [2, 0, 3, 3]]
+//solution(matrix) = 9.
+// let matrix = [
+//     [0, 1, 1, 2], 
+//     [0, 5, 0, 0], 
+//     [2, 0, 3, 3]
+// ]
+
+// function solution(matrix) {
+  
+// let sum = 0;
+// for (let i = 0; i < matrix[0].length; i++) {
+//   for (let j = 0; j < matrix.length; j++) {
+//     if (matrix[j][i] > 0) {
+//       sum = sum + matrix[j][i];
+//     } else if (matrix[j][i] === 0) {
+//       break;
+//     }
+//   }
+// }
+// return sum;
+// }
+// console.log(solution(matrix))
