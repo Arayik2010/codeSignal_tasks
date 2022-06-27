@@ -169,3 +169,23 @@
 //     return count;
 //   }
 // console.log(solution("aabcc", "adcaa"));
+
+//11.Ticket numbers usually consist of an even number of digits. A ticket number is considered lucky if the sum of the first half of the digits is equal to the sum of the second half.
+//Example
+//For n = 1230, the output should besolution(n) = true;
+//For n = 239017, the output should besolution(n) = false;
+// function solution(n) {
+//   let sum1 = 0;
+//   let sum2 = 0;
+//   let str = n.toString();
+//   let k = str.length / 2;
+//   for (let i = 0; i < k; i++) {
+//     sum1 += parseInt(str[i]);
+//   }
+//   for (let j = k; j < str.length; j++) {
+//     sum2 += parseInt(str[j]);
+//   }
+//   return sum1===sum2
+// }
+
+// console.log(solution(1230));
