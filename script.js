@@ -206,3 +206,47 @@
 // }
 
 // console.log(solution([-1, 150, 190, 170, -1, -1, 160, 180]));
+
+//13.You are given a two-digit integer n. Return the sum of its digits.
+
+// function solution(n) {
+//   let num1 = Math.floor(n/10) 
+//   let num2  = n%10
+//   return num1 + num2
+
+// }
+
+// console.log(solution(29))
+
+//14.Given an integer n, return the largest number that contains exactly n digits.
+
+// function solution(n) {
+//  return Math.pow(10, n) - 1;
+// }
+// console.log(solution(2));
+
+//15.n children have got m pieces of candy. They want to eat as much candy as they can, but each child must eat exactly the same amount of candy as any other child. Determine how many pieces of candy will be eaten by all the children together. Individual pieces of candy cannot be split.
+
+// function solution(n, m) {
+//     let oneChildPieces = Math.floor(m/n)
+//     let ollPieces = oneChildPieces*n
+//     return ollPieces
+
+// }
+// console.log(solution(3,10));
+
+
+//16.Your friend advised you to see a new performance in the most popular theater in the city. He knows a lot about art and his advice is usually good, but not this time: the performance turned out to be awfully dull. It's so bad you want to sneak out, which is quite simple, especially since the exit is located right behind your row to the left. All you need to do is climb over your seat and make your way to the exit.
+
+// The main problem is your shyness: you're afraid that you'll end up blocking the view (even if only for a couple of seconds) of all the people who sit behind you and in your column or the columns to your left. To gain some courage, you decide to calculate the number of such people and see if you can possibly make it to the exit without disturbing too many people.
+
+// Given the total number of rows and columns in the theater (nRows and nCols, respectively), and the row and column you're sitting in, return the number of people who sit strictly behind you and in your column or to the left, assuming all seats are occupied.
+
+// function solution(nCols, nRows, col, row) {
+
+//     let myCol = nCols - (col-1)
+//     let myRow = nRows - row
+//     return myCol*myRow
+
+// }
+// console.log(solution(16,11,5,3));
