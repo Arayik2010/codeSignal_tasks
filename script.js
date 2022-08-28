@@ -210,7 +210,7 @@
 //13.You are given a two-digit integer n. Return the sum of its digits.
 
 // function solution(n) {
-//   let num1 = Math.floor(n/10) 
+//   let num1 = Math.floor(n/10)
 //   let num2  = n%10
 //   return num1 + num2
 
@@ -235,7 +235,6 @@
 // }
 // console.log(solution(3,10));
 
-
 //16.Your friend advised you to see a new performance in the most popular theater in the city. He knows a lot about art and his advice is usually good, but not this time: the performance turned out to be awfully dull. It's so bad you want to sneak out, which is quite simple, especially since the exit is located right behind your row to the left. All you need to do is climb over your seat and make your way to the exit.
 
 // The main problem is your shyness: you're afraid that you'll end up blocking the view (even if only for a couple of seconds) of all the people who sit behind you and in your column or the columns to your left. To gain some courage, you decide to calculate the number of such people and see if you can possibly make it to the exit without disturbing too many people.
@@ -250,3 +249,61 @@
 
 // }
 // console.log(solution(16,11,5,3));
+
+//17.Given a divisor and a bound, find the largest integer N such that:
+
+// N is divisible by divisor.
+// N is less than or equal to bound.
+// N is greater than 0.
+// It is guaranteed that such a number exists.
+
+// function solution(divisor, bound) {
+//     let num = Math.floor(bound/divisor)
+//     let largestNum = num*divisor
+//     if(largestNum % num == 0 && 0 < largestNum <= bound) {
+//         return largestNum
+//     }
+
+// }
+// console.log(solution(3,10));
+
+//18.Consider integer numbers from 0 to n - 1 written down along the circle in such a way that the distance between any two neighboring numbers is equal (note that 0 and n - 1 are neighboring, too).
+
+// Given n and firstNumber, find the number which is written in the radially opposite position to firstNumber.
+
+// function solution(n, firstNumber) {
+
+//    let num = n / 2;
+//    let positionNum;
+//    if (firstNumber < num) {
+//      return (positionNum = firstNumber + num);
+//    } else if (firstNumber > num) {
+//      return (positionNum = firstNumber - num);
+//    } else if (firstNumber == num) {
+//      return (positionNum = num - firstNumber);
+//    }
+
+// }
+// console.log(solution(10,7));
+
+//19.One night you go for a ride on your motorcycle. At 00:00 you start your engine, and the built-in timer automatically begins counting the length of your ride, in minutes. Off you go to explore the neighborhood.
+
+// When you finally decide to head back, you realize there's a chance the bridges on your route home are up, leaving you stranded! Unfortunately, you don't have your watch on you and don't know what time it is. All you know thanks to the bike's timer is that n minutes have passed since 00:00.
+
+// Using the bike's timer, calculate the current time. Return an answer as the sum of digits that the digital timer in the format hh:mm would show.
+
+// function solution(n) {
+//   let time = 0;
+
+//   let hour = Math.floor(n / 60);
+//   let hour1 = hour * 60;
+//   let hour2 = n - hour1;
+//   let strHour = hour.toString() + hour2.toString();
+ 
+//   for (let i = 0; i < strHour.length; i++) {
+//      time += +strHour[i]
+//   }
+//   return time
+  
+// }
+// console.log(solution(808));
